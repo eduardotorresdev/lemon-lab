@@ -37,7 +37,7 @@
                     "queue": [],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 6754.112721417069,
+                        "arrivalRate": 6326.250377073907,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -60,7 +60,7 @@
                     "queue": [],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 4524.599784250269,
+                        "arrivalRate": 4202.709418837675,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -85,32 +85,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 4524.599784250269,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 3059.302698760029,
+                        "arrivalRate": 3125.412816691505,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -136,33 +111,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 3059.302698760029,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 2434.3029599535694,
+                        "arrivalRate": 2646.2485804416406,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -189,34 +138,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 2434.3029599535694,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 2049.000488519785,
+                        "arrivalRate": 2331.4641467481933,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -244,35 +166,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 2049.000488519785,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 1686.4913550462404,
+                        "arrivalRate": 1972.8617121354657,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -301,36 +195,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 1686.4913550462404,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 1494.7626514611547,
+                        "arrivalRate": 1801.6769759450171,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -360,37 +225,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 1494.7626514611547,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 1321.0406299212598,
+                        "arrivalRate": 1620.6738794435857,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -421,38 +256,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 1321.0406299212598,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 841.7226570339153,
+                        "arrivalRate": 1424.695652173913,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -484,39 +288,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 841.7226570339153,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 730.4604667363288,
+                        "arrivalRate": 1328.1519949335022,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -549,40 +321,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 730.4604667363288,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 677.9220947147244,
+                        "arrivalRate": 1228.5600468658465,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -616,41 +355,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 677.9220947147244,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 631.3870239349692,
+                        "arrivalRate": 1122.3719561145303,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -685,42 +390,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 631.3870239349692,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 591.0800450958286,
+                        "arrivalRate": 1028.0156862745098,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -756,43 +426,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 591.0800450958286,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 542.3201448151021,
+                        "arrivalRate": 960.6743014200641,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -829,44 +463,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 542.3201448151021,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 517.5597235932872,
+                        "arrivalRate": 905.897192224622,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -904,45 +501,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 517.5597235932872,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 491.8850709510965,
+                        "arrivalRate": 848.1908998988878,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -981,46 +540,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 491.8850709510965,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 471.0055025266704,
+                        "arrivalRate": 807.2178598922247,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -1060,47 +580,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 471.0055025266704,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 450.225848003435,
+                        "arrivalRate": 761.7697057755177,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -1141,48 +621,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 450.225848003435,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 433.25111042247704,
+                        "arrivalRate": 730.5877024908552,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -1224,49 +663,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 433.25111042247704,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 418.42617717478055,
+                        "arrivalRate": 702.798927613941,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -1309,50 +706,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 418.42617717478055,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 401.6378435315522,
+                        "arrivalRate": 646.7700848111025,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -1396,51 +750,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 401.6378435315522,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 386.25140436504284,
+                        "arrivalRate": 619.6342148027774,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -1485,52 +795,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 386.25140436504284,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 370.22720451937505,
+                        "arrivalRate": 589.9991559994373,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -1576,53 +841,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 370.22720451937505,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 358.42625192274824,
+                        "arrivalRate": 571.1198257080611,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -1669,7 +888,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 358.42625192274824,
+                        "arrivalRate": 554.3621464446206,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -1716,54 +935,7 @@
                     ],
                     "metrics": {
                         "usage": 100,
-                        "arrivalRate": 347.9595155135225,
-                        "serviceRate": null,
-                        "serviceTime": null,
-                        "awaitSystem": null,
-                        "awaitQueue": null
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23
-                    ],
-                    "metrics": {
-                        "usage": 100,
-                        "arrivalRate": 347.9595155135225,
+                        "arrivalRate": 554.3621464446206,
                         "serviceRate": null,
                         "serviceTime": null,
                         "awaitSystem": null,
@@ -1809,12 +981,12 @@
                         23
                     ],
                     "metrics": {
-                        "usage": 102.26480836236934,
-                        "arrivalRate": 347.9595155135225,
-                        "serviceRate": 340.25342743571025,
-                        "serviceTime": 0.002938985824584961,
-                        "awaitSystem": 0.005730867385864258,
-                        "awaitQueue": 0.002791881561279297
+                        "usage": 103.44964314036477,
+                        "arrivalRate": 554.3621464446206,
+                        "serviceRate": 535.8763255397981,
+                        "serviceTime": 0.0018661022186279297,
+                        "awaitSystem": 0.003573179244995117,
+                        "awaitQueue": 0.0017070770263671875
                     }
                 }
             ],
@@ -1855,12 +1027,12 @@
                         23
                     ],
                     "metrics": {
-                        "usage": 102.26480836236934,
-                        "arrivalRate": 347.9595155135225,
-                        "serviceRate": 340.25342743571025,
-                        "serviceTime": 0.002938985824584961,
-                        "awaitSystem": 0.005730867385864258,
-                        "awaitQueue": 0.002791881561279297
+                        "usage": 103.44964314036477,
+                        "arrivalRate": 554.3621464446206,
+                        "serviceRate": 535.8763255397981,
+                        "serviceTime": 0.0018661022186279297,
+                        "awaitSystem": 0.003573179244995117,
+                        "awaitQueue": 0.0017070770263671875
                     }
                 }
             ],
@@ -1902,12 +1074,12 @@
                         24
                     ],
                     "metrics": {
-                        "usage": 102.26480836236934,
-                        "arrivalRate": 347.9595155135225,
-                        "serviceRate": 340.25342743571025,
-                        "serviceTime": 0.002938985824584961,
-                        "awaitSystem": 0.005730867385864258,
-                        "awaitQueue": 0.002791881561279297
+                        "usage": 93.97286589026294,
+                        "arrivalRate": 503.57834073718334,
+                        "serviceRate": 535.8763255397981,
+                        "serviceTime": 0.0018661022186279297,
+                        "awaitSystem": 0.003573179244995117,
+                        "awaitQueue": 0.0017070770263671875
                     }
                 }
             ],
@@ -1949,59 +1121,12 @@
                         24
                     ],
                     "metrics": {
-                        "usage": 94.56121509665542,
-                        "arrivalRate": 321.7477753912243,
-                        "serviceRate": 340.25342743571025,
-                        "serviceTime": 0.002938985824584961,
-                        "awaitSystem": 0.005730867385864258,
-                        "awaitQueue": 0.002791881561279297
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 62.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24
-                    ],
-                    "metrics": {
-                        "usage": 94.56121509665542,
-                        "arrivalRate": 321.7477753912243,
-                        "serviceRate": 340.25342743571025,
-                        "serviceTime": 0.002938985824584961,
-                        "awaitSystem": 0.005730867385864258,
-                        "awaitQueue": 0.002791881561279297
+                        "usage": 93.97286589026294,
+                        "arrivalRate": 503.57834073718334,
+                        "serviceRate": 535.8763255397981,
+                        "serviceTime": 0.0018661022186279297,
+                        "awaitSystem": 0.003573179244995117,
+                        "awaitQueue": 0.0017070770263671875
                     }
                 }
             ],
@@ -2043,12 +1168,12 @@
                         24
                     ],
                     "metrics": {
-                        "usage": 101.83338447376495,
-                        "arrivalRate": 321.7477753912243,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 102.88149837915716,
+                        "arrivalRate": 503.57834073718334,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -2089,12 +1214,12 @@
                         24
                     ],
                     "metrics": {
-                        "usage": 101.83338447376495,
-                        "arrivalRate": 321.7477753912243,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 102.88149837915716,
+                        "arrivalRate": 503.57834073718334,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -2136,59 +1261,12 @@
                         25
                     ],
                     "metrics": {
-                        "usage": 101.83338447376495,
-                        "arrivalRate": 321.7477753912243,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25
-                    ],
-                    "metrics": {
-                        "usage": 95.38693683983618,
-                        "arrivalRate": 301.37989509233313,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 94.72695113862481,
+                        "arrivalRate": 463.66393986292286,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -2231,60 +1309,12 @@
                         26
                     ],
                     "metrics": {
-                        "usage": 95.38693683983618,
-                        "arrivalRate": 301.37989509233313,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26
-                    ],
-                    "metrics": {
-                        "usage": 91.87487023323413,
-                        "arrivalRate": 290.2833414077099,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 91.90261690261691,
+                        "arrivalRate": 449.83955383955384,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -2328,61 +1358,12 @@
                         27
                     ],
                     "metrics": {
-                        "usage": 91.87487023323413,
-                        "arrivalRate": 290.2833414077099,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27
-                    ],
-                    "metrics": {
-                        "usage": 88.80192655027092,
-                        "arrivalRate": 280.5742190113051,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 89.76534674209093,
+                        "arrivalRate": 439.37816886654093,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -2427,62 +1408,12 @@
                         28
                     ],
                     "metrics": {
-                        "usage": 88.80192655027092,
-                        "arrivalRate": 280.5742190113051,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28
-                    ],
-                    "metrics": {
-                        "usage": 85.51826322231527,
-                        "arrivalRate": 270.19931714230495,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 87.02142784604449,
+                        "arrivalRate": 425.9473951457297,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -2528,63 +1459,12 @@
                         29
                     ],
                     "metrics": {
-                        "usage": 85.51826322231527,
-                        "arrivalRate": 270.19931714230495,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29
-                    ],
-                    "metrics": {
-                        "usage": 83.13502004008015,
-                        "arrivalRate": 262.6693386773547,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 84.63209876543209,
+                        "arrivalRate": 414.2522469135802,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -2631,64 +1511,12 @@
                         30
                     ],
                     "metrics": {
-                        "usage": 83.13502004008015,
-                        "arrivalRate": 262.6693386773547,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30
-                    ],
-                    "metrics": {
-                        "usage": 79.60542096426,
-                        "arrivalRate": 251.51739026145358,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 81.91377497371188,
+                        "arrivalRate": 400.9467546123698,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -2736,65 +1564,12 @@
                         31
                     ],
                     "metrics": {
-                        "usage": 79.60542096426,
-                        "arrivalRate": 251.51739026145358,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31
-                    ],
-                    "metrics": {
-                        "usage": 77.31058179488673,
-                        "arrivalRate": 244.26672878690815,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 79.24720244150559,
+                        "arrivalRate": 387.89457134930177,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -2843,66 +1618,12 @@
                         32
                     ],
                     "metrics": {
-                        "usage": 77.31058179488673,
-                        "arrivalRate": 244.26672878690815,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32
-                    ],
-                    "metrics": {
-                        "usage": 75.24657068359598,
-                        "arrivalRate": 237.74538034236483,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 76.92100538599641,
+                        "arrivalRate": 376.5084380610413,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -2952,67 +1673,12 @@
                         33
                     ],
                     "metrics": {
-                        "usage": 75.24657068359598,
-                        "arrivalRate": 237.74538034236483,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33
-                    ],
-                    "metrics": {
-                        "usage": 73.24542043698963,
-                        "arrivalRate": 231.42264400794528,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 74.6168582375479,
+                        "arrivalRate": 365.2302333681644,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -3063,68 +1729,12 @@
                         34
                     ],
                     "metrics": {
-                        "usage": 73.24542043698963,
-                        "arrivalRate": 231.42264400794528,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34
-                    ],
-                    "metrics": {
-                        "usage": 71.55948466389953,
-                        "arrivalRate": 226.09584388981727,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 72.83467913302168,
+                        "arrivalRate": 356.5069273268168,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -3176,69 +1786,12 @@
                         35
                     ],
                     "metrics": {
-                        "usage": 71.55948466389953,
-                        "arrivalRate": 226.09584388981727,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35
-                    ],
-                    "metrics": {
-                        "usage": 70.0971591509135,
-                        "arrivalRate": 221.47555180061252,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 71.33699633699634,
+                        "arrivalRate": 349.1761571761572,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -3291,70 +1844,12 @@
                         36
                     ],
                     "metrics": {
-                        "usage": 70.0971591509135,
-                        "arrivalRate": 221.47555180061252,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36
-                    ],
-                    "metrics": {
-                        "usage": 68.6223830447144,
-                        "arrivalRate": 216.81592142672525,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 69.77444833482616,
+                        "arrivalRate": 341.5278886084195,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -3408,71 +1903,12 @@
                         37
                     ],
                     "metrics": {
-                        "usage": 68.6223830447144,
-                        "arrivalRate": 216.81592142672525,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37
-                    ],
-                    "metrics": {
-                        "usage": 67.12682038834951,
-                        "arrivalRate": 212.0906148867314,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 68.17024661893397,
+                        "arrivalRate": 333.6757358790772,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -3527,72 +1963,12 @@
                         38
                     ],
                     "metrics": {
-                        "usage": 67.12682038834951,
-                        "arrivalRate": 212.0906148867314,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38
-                    ],
-                    "metrics": {
-                        "usage": 65.44567146519424,
-                        "arrivalRate": 206.77893906527314,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 66.22613803230543,
+                        "arrivalRate": 324.15982687997524,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -3648,73 +2024,12 @@
                         39
                     ],
                     "metrics": {
-                        "usage": 65.44567146519424,
-                        "arrivalRate": 206.77893906527314,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39
-                    ],
-                    "metrics": {
-                        "usage": 64.0407159052535,
-                        "arrivalRate": 202.33991027063533,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 64.69122754038955,
+                        "arrivalRate": 316.646836780915,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -3771,74 +2086,12 @@
                         40
                     ],
                     "metrics": {
-                        "usage": 64.0407159052535,
-                        "arrivalRate": 202.33991027063533,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40
-                    ],
-                    "metrics": {
-                        "usage": 62.721474131821395,
-                        "arrivalRate": 198.17169855894164,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 62.79035685498645,
+                        "arrivalRate": 307.3425661317506,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -3896,75 +2149,12 @@
                         41
                     ],
                     "metrics": {
-                        "usage": 62.721474131821395,
-                        "arrivalRate": 198.17169855894164,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41
-                    ],
-                    "metrics": {
-                        "usage": 61.19485548333563,
-                        "arrivalRate": 193.34826902687502,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 61.70519190609923,
+                        "arrivalRate": 302.0309642111327,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -4023,12 +2213,12 @@
                         42
                     ],
                     "metrics": {
-                        "usage": 61.19485548333563,
-                        "arrivalRate": 193.34826902687502,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 60.69556594418473,
+                        "arrivalRate": 297.0891061056807,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -4087,76 +2277,12 @@
                         42
                     ],
                     "metrics": {
-                        "usage": 60.09234529899054,
-                        "arrivalRate": 189.86483183196776,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 41.5
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42
-                    ],
-                    "metrics": {
-                        "usage": 60.09234529899054,
-                        "arrivalRate": 189.86483183196776,
-                        "serviceRate": 315.9551035781544,
-                        "serviceTime": 0.003165006637573242,
-                        "awaitSystem": 0.006032466888427734,
-                        "awaitQueue": 0.002867460250854492
+                        "usage": 60.69556594418473,
+                        "arrivalRate": 297.0891061056807,
+                        "serviceRate": 489.47415100945267,
+                        "serviceTime": 0.002043008804321289,
+                        "awaitSystem": 0.0037986040115356445,
+                        "awaitQueue": 0.0017555952072143555
                     }
                 }
             ],
@@ -4215,12 +2341,12 @@
                         42
                     ],
                     "metrics": {
-                        "usage": 100.91439952922003,
-                        "arrivalRate": 189.86483183196776,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
+                        "usage": 101.3387165320867,
+                        "arrivalRate": 297.0891061056807,
+                        "serviceRate": 293.1644649472286,
+                        "serviceTime": 0.0034110546112060547,
+                        "awaitSystem": 0.005215167999267578,
+                        "awaitQueue": 0.0018041133880615234
                     }
                 }
             ],
@@ -4278,12 +2404,12 @@
                         42
                     ],
                     "metrics": {
-                        "usage": 100.91439952922003,
-                        "arrivalRate": 189.86483183196776,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
+                        "usage": 101.3387165320867,
+                        "arrivalRate": 297.0891061056807,
+                        "serviceRate": 293.1644649472286,
+                        "serviceTime": 0.0034110546112060547,
+                        "awaitSystem": 0.005215167999267578,
+                        "awaitQueue": 0.0018041133880615234
                     }
                 }
             ],
@@ -4342,76 +2468,12 @@
                         43
                     ],
                     "metrics": {
-                        "usage": 100.91439952922003,
-                        "arrivalRate": 189.86483183196776,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 28.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43
-                    ],
-                    "metrics": {
-                        "usage": 96.64036760880873,
-                        "arrivalRate": 181.8234784116525,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
+                        "usage": 96.76699357456883,
+                        "arrivalRate": 283.6864389584038,
+                        "serviceRate": 293.1644649472286,
+                        "serviceTime": 0.0034110546112060547,
+                        "awaitSystem": 0.005215167999267578,
+                        "awaitQueue": 0.0018041133880615234
                     }
                 }
             ],
@@ -4471,12 +2533,12 @@
                         44
                     ],
                     "metrics": {
-                        "usage": 96.64036760880873,
-                        "arrivalRate": 181.8234784116525,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
+                        "usage": 95.44362908605737,
+                        "arrivalRate": 279.80680453635756,
+                        "serviceRate": 293.1644649472286,
+                        "serviceTime": 0.0034110546112060547,
+                        "awaitSystem": 0.005215167999267578,
+                        "awaitQueue": 0.0018041133880615234
                     }
                 }
             ],
@@ -4536,77 +2598,12 @@
                         44
                     ],
                     "metrics": {
-                        "usage": 95.13506593265907,
-                        "arrivalRate": 178.9913370033713,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 28.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44
-                    ],
-                    "metrics": {
-                        "usage": 95.13506593265907,
-                        "arrivalRate": 178.9913370033713,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
+                        "usage": 95.44362908605737,
+                        "arrivalRate": 279.80680453635756,
+                        "serviceRate": 293.1644649472286,
+                        "serviceTime": 0.0034110546112060547,
+                        "awaitSystem": 0.005215167999267578,
+                        "awaitQueue": 0.0018041133880615234
                     }
                 }
             ],
@@ -4667,78 +2664,12 @@
                         45
                     ],
                     "metrics": {
-                        "usage": 95.13506593265907,
-                        "arrivalRate": 178.9913370033713,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44,
-                        45
-                    ],
-                    "metrics": {
-                        "usage": 92.91847282427474,
-                        "arrivalRate": 174.8209403134378,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
+                        "usage": 93.07181889149102,
+                        "arrivalRate": 272.8534998698933,
+                        "serviceRate": 293.1644649472286,
+                        "serviceTime": 0.0034110546112060547,
+                        "awaitSystem": 0.005215167999267578,
+                        "awaitQueue": 0.0018041133880615234
                     }
                 }
             ],
@@ -4800,79 +2731,12 @@
                         46
                     ],
                     "metrics": {
-                        "usage": 92.91847282427474,
-                        "arrivalRate": 174.8209403134378,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44,
-                        45,
-                        46
-                    ],
-                    "metrics": {
-                        "usage": 90.88425944800032,
-                        "arrivalRate": 170.99368094908067,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
+                        "usage": 90.74590891792465,
+                        "arrivalRate": 266.0347583407332,
+                        "serviceRate": 293.1644649472286,
+                        "serviceTime": 0.0034110546112060547,
+                        "awaitSystem": 0.005215167999267578,
+                        "awaitQueue": 0.0018041133880615234
                     }
                 }
             ],
@@ -4935,80 +2799,12 @@
                         47
                     ],
                     "metrics": {
-                        "usage": 90.88425944800032,
-                        "arrivalRate": 170.99368094908067,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44,
-                        45,
-                        46,
-                        47
-                    ],
-                    "metrics": {
-                        "usage": 88.95494992218984,
-                        "arrivalRate": 167.3637923466741,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
+                        "usage": 88.67059188100403,
+                        "arrivalRate": 259.9506662534862,
+                        "serviceRate": 293.1644649472286,
+                        "serviceTime": 0.0034110546112060547,
+                        "awaitSystem": 0.005215167999267578,
+                        "awaitQueue": 0.0018041133880615234
                     }
                 }
             ],
@@ -5072,81 +2868,12 @@
                         48
                     ],
                     "metrics": {
-                        "usage": 88.95494992218984,
-                        "arrivalRate": 167.3637923466741,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44,
-                        45,
-                        46,
-                        47,
-                        48
-                    ],
-                    "metrics": {
-                        "usage": 87.33448248844314,
-                        "arrivalRate": 164.31497296873775,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
+                        "usage": 86.9250865787715,
+                        "arrivalRate": 254.8334649735707,
+                        "serviceRate": 293.1644649472286,
+                        "serviceTime": 0.0034110546112060547,
+                        "awaitSystem": 0.005215167999267578,
+                        "awaitQueue": 0.0018041133880615234
                     }
                 }
             ],
@@ -5211,12 +2938,12 @@
                         49
                     ],
                     "metrics": {
-                        "usage": 87.33448248844314,
-                        "arrivalRate": 164.31497296873775,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
+                        "usage": 84.38716527073258,
+                        "arrivalRate": 247.3931815500767,
+                        "serviceRate": 293.1644649472286,
+                        "serviceTime": 0.0034110546112060547,
+                        "awaitSystem": 0.005215167999267578,
+                        "awaitQueue": 0.0018041133880615234
                     }
                 }
             ],
@@ -5281,12 +3008,12 @@
                         49
                     ],
                     "metrics": {
-                        "usage": 85.76869806094182,
-                        "arrivalRate": 161.36903662665435,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
+                        "usage": 84.38716527073258,
+                        "arrivalRate": 247.3931815500767,
+                        "serviceRate": 293.1644649472286,
+                        "serviceTime": 0.0034110546112060547,
+                        "awaitSystem": 0.005215167999267578,
+                        "awaitQueue": 0.0018041133880615234
                     }
                 }
             ],
@@ -5351,82 +3078,12 @@
                         49
                     ],
                     "metrics": {
-                        "usage": 85.76869806094182,
-                        "arrivalRate": 161.36903662665435,
-                        "serviceRate": 188.14443995873145,
-                        "serviceTime": 0.005315065383911133,
-                        "awaitSystem": 0.00825810432434082,
-                        "awaitQueue": 0.0029430389404296875
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44,
-                        45,
-                        46,
-                        47,
-                        48,
-                        49
-                    ],
-                    "metrics": {
-                        "usage": 100.76177285318559,
-                        "arrivalRate": 161.36903662665435,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
+                        "usage": 101.42739176595495,
+                        "arrivalRate": 247.3931815500767,
+                        "serviceRate": 243.91160735054663,
+                        "serviceTime": 0.004099845886230469,
+                        "awaitSystem": 0.0065195560455322266,
+                        "awaitQueue": 0.002419710159301758
                     }
                 }
             ],
@@ -5490,12 +3147,12 @@
                         49
                     ],
                     "metrics": {
-                        "usage": 100.76177285318559,
-                        "arrivalRate": 161.36903662665435,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
+                        "usage": 101.42739176595495,
+                        "arrivalRate": 247.3931815500767,
+                        "serviceRate": 243.91160735054663,
+                        "serviceTime": 0.004099845886230469,
+                        "awaitSystem": 0.0065195560455322266,
+                        "awaitQueue": 0.002419710159301758
                     }
                 }
             ],
@@ -5560,82 +3217,12 @@
                         50
                     ],
                     "metrics": {
-                        "usage": 100.76177285318559,
-                        "arrivalRate": 161.36903662665435,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44,
-                        45,
-                        46,
-                        47,
-                        48,
-                        49,
-                        50
-                    ],
-                    "metrics": {
-                        "usage": 97.16914629169297,
-                        "arrivalRate": 155.61547879642342,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
+                        "usage": 96.42256364248065,
+                        "arrivalRate": 235.18582482897835,
+                        "serviceRate": 243.91160735054663,
+                        "serviceTime": 0.004099845886230469,
+                        "awaitSystem": 0.0065195560455322266,
+                        "awaitQueue": 0.002419710159301758
                     }
                 }
             ],
@@ -5701,83 +3288,12 @@
                         51
                     ],
                     "metrics": {
-                        "usage": 97.16914629169297,
-                        "arrivalRate": 155.61547879642342,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44,
-                        45,
-                        46,
-                        47,
-                        48,
-                        49,
-                        50,
-                        51
-                    ],
-                    "metrics": {
-                        "usage": 95.32996032468242,
-                        "arrivalRate": 152.67003967531758,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
+                        "usage": 94.40570958001648,
+                        "arrivalRate": 230.26648366730717,
+                        "serviceRate": 243.91160735054663,
+                        "serviceTime": 0.004099845886230469,
+                        "awaitSystem": 0.0065195560455322266,
+                        "awaitQueue": 0.002419710159301758
                     }
                 }
             ],
@@ -5844,84 +3360,12 @@
                         52
                     ],
                     "metrics": {
-                        "usage": 95.32996032468242,
-                        "arrivalRate": 152.67003967531758,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44,
-                        45,
-                        46,
-                        47,
-                        48,
-                        49,
-                        50,
-                        51,
-                        52
-                    ],
-                    "metrics": {
-                        "usage": 93.32240592930445,
-                        "arrivalRate": 149.45496009122007,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
+                        "usage": 92.48641962028721,
+                        "arrivalRate": 225.58511267681385,
+                        "serviceRate": 243.91160735054663,
+                        "serviceTime": 0.004099845886230469,
+                        "awaitSystem": 0.0065195560455322266,
+                        "awaitQueue": 0.002419710159301758
                     }
                 }
             ],
@@ -5989,85 +3433,12 @@
                         53
                     ],
                     "metrics": {
-                        "usage": 93.32240592930445,
-                        "arrivalRate": 149.45496009122007,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44,
-                        45,
-                        46,
-                        47,
-                        48,
-                        49,
-                        50,
-                        51,
-                        52,
-                        53
-                    ],
-                    "metrics": {
-                        "usage": 91.70489162785813,
-                        "arrivalRate": 146.86452606883995,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
+                        "usage": 91.02747340003175,
+                        "arrivalRate": 222.02657350060875,
+                        "serviceRate": 243.91160735054663,
+                        "serviceTime": 0.004099845886230469,
+                        "awaitSystem": 0.0065195560455322266,
+                        "awaitQueue": 0.002419710159301758
                     }
                 }
             ],
@@ -6136,86 +3507,12 @@
                         54
                     ],
                     "metrics": {
-                        "usage": 91.70489162785813,
-                        "arrivalRate": 146.86452606883995,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44,
-                        45,
-                        46,
-                        47,
-                        48,
-                        49,
-                        50,
-                        51,
-                        52,
-                        53,
-                        54
-                    ],
-                    "metrics": {
-                        "usage": 89.97526453208741,
-                        "arrivalRate": 144.09454445513262,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
+                        "usage": 89.13077281915722,
+                        "arrivalRate": 217.40030062717048,
+                        "serviceRate": 243.91160735054663,
+                        "serviceTime": 0.004099845886230469,
+                        "awaitSystem": 0.0065195560455322266,
+                        "awaitQueue": 0.002419710159301758
                     }
                 }
             ],
@@ -6285,87 +3582,12 @@
                         55
                     ],
                     "metrics": {
-                        "usage": 89.97526453208741,
-                        "arrivalRate": 144.09454445513262,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44,
-                        45,
-                        46,
-                        47,
-                        48,
-                        49,
-                        50,
-                        51,
-                        52,
-                        53,
-                        54,
-                        55
-                    ],
-                    "metrics": {
-                        "usage": 88.05729271736938,
-                        "arrivalRate": 141.02293053594244,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
+                        "usage": 87.84674329501917,
+                        "arrivalRate": 214.2684035759898,
+                        "serviceRate": 243.91160735054663,
+                        "serviceTime": 0.004099845886230469,
+                        "awaitSystem": 0.0065195560455322266,
+                        "awaitQueue": 0.002419710159301758
                     }
                 }
             ],
@@ -6436,88 +3658,12 @@
                         56
                     ],
                     "metrics": {
-                        "usage": 88.05729271736938,
-                        "arrivalRate": 141.02293053594244,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44,
-                        45,
-                        46,
-                        47,
-                        48,
-                        49,
-                        50,
-                        51,
-                        52,
-                        53,
-                        54,
-                        55,
-                        56
-                    ],
-                    "metrics": {
-                        "usage": 86.80808750414319,
-                        "arrivalRate": 139.02234007292012,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
+                        "usage": 86.62099536570624,
+                        "arrivalRate": 211.27866209953658,
+                        "serviceRate": 243.91160735054663,
+                        "serviceTime": 0.004099845886230469,
+                        "awaitSystem": 0.0065195560455322266,
+                        "awaitQueue": 0.002419710159301758
                     }
                 }
             ],
@@ -6589,89 +3735,12 @@
                         57
                     ],
                     "metrics": {
-                        "usage": 86.80808750414319,
-                        "arrivalRate": 139.02234007292012,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44,
-                        45,
-                        46,
-                        47,
-                        48,
-                        49,
-                        50,
-                        51,
-                        52,
-                        53,
-                        54,
-                        55,
-                        56,
-                        57
-                    ],
-                    "metrics": {
-                        "usage": 85.56027442012414,
-                        "arrivalRate": 137.02397909180007,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
+                        "usage": 85.34418581567324,
+                        "arrivalRate": 208.16437540324583,
+                        "serviceRate": 243.91160735054663,
+                        "serviceTime": 0.004099845886230469,
+                        "awaitSystem": 0.0065195560455322266,
+                        "awaitQueue": 0.002419710159301758
                     }
                 }
             ],
@@ -6744,90 +3813,12 @@
                         58
                     ],
                     "metrics": {
-                        "usage": 85.56027442012414,
-                        "arrivalRate": 137.02397909180007,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44,
-                        45,
-                        46,
-                        47,
-                        48,
-                        49,
-                        50,
-                        51,
-                        52,
-                        53,
-                        54,
-                        55,
-                        56,
-                        57,
-                        58
-                    ],
-                    "metrics": {
-                        "usage": 84.35869355150422,
-                        "arrivalRate": 135.09965857115247,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
+                        "usage": 84.27346238666993,
+                        "arrivalRate": 205.55275667728498,
+                        "serviceRate": 243.91160735054663,
+                        "serviceTime": 0.004099845886230469,
+                        "awaitSystem": 0.0065195560455322266,
+                        "awaitQueue": 0.002419710159301758
                     }
                 }
             ],
@@ -6901,91 +3892,12 @@
                         59
                     ],
                     "metrics": {
-                        "usage": 84.35869355150422,
-                        "arrivalRate": 135.09965857115247,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44,
-                        45,
-                        46,
-                        47,
-                        48,
-                        49,
-                        50,
-                        51,
-                        52,
-                        53,
-                        54,
-                        55,
-                        56,
-                        57,
-                        58,
-                        59
-                    ],
-                    "metrics": {
-                        "usage": 83.02425106990015,
-                        "arrivalRate": 132.96256142019337,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
+                        "usage": 82.77654760758641,
+                        "arrivalRate": 201.90160777895446,
+                        "serviceRate": 243.91160735054663,
+                        "serviceTime": 0.004099845886230469,
+                        "awaitSystem": 0.0065195560455322266,
+                        "awaitQueue": 0.002419710159301758
                     }
                 }
             ],
@@ -7060,92 +3972,12 @@
                         60
                     ],
                     "metrics": {
-                        "usage": 83.02425106990015,
-                        "arrivalRate": 132.96256142019337,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
-                    }
-                }
-            ],
-            "containers": [
-                {
-                    "name": "Tanque de combust\u00edvel 1",
-                    "percentage": 100.0
-                }
-            ]
-        },
-        {
-            "resources": [
-                {
-                    "name": "Bomba de combust\u00edvel 1",
-                    "usage": 0,
-                    "queue": [
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10,
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16,
-                        17,
-                        18,
-                        19,
-                        20,
-                        21,
-                        22,
-                        23,
-                        24,
-                        25,
-                        26,
-                        27,
-                        28,
-                        29,
-                        30,
-                        31,
-                        32,
-                        33,
-                        34,
-                        35,
-                        36,
-                        37,
-                        38,
-                        39,
-                        40,
-                        41,
-                        42,
-                        43,
-                        44,
-                        45,
-                        46,
-                        47,
-                        48,
-                        49,
-                        50,
-                        51,
-                        52,
-                        53,
-                        54,
-                        55,
-                        56,
-                        57,
-                        58,
-                        59,
-                        60
-                    ],
-                    "metrics": {
-                        "usage": 81.5811606391926,
-                        "arrivalRate": 130.65146559511572,
-                        "serviceRate": 160.14906452844596,
-                        "serviceTime": 0.006244182586669922,
-                        "awaitSystem": 0.010169625282287598,
-                        "awaitQueue": 0.003925442695617676
+                        "usage": 81.29727685325265,
+                        "arrivalRate": 198.29349470499244,
+                        "serviceRate": 243.91160735054663,
+                        "serviceTime": 0.004099845886230469,
+                        "awaitSystem": 0.0065195560455322266,
+                        "awaitQueue": 0.002419710159301758
                     }
                 }
             ],

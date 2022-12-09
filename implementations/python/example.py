@@ -53,7 +53,6 @@ def car(name, env, gas_station, fuel_pump, bomba: lemonlab.Resource):
 
         if(queuePos > 0):
             bomba.pushQueue()
-            bomba.takeSnapshot()
 
         bomba.setMetric(
             lemonlab.ArrivalRateCalculator(
