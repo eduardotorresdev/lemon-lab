@@ -7,16 +7,15 @@ import {
     faPizzaSlice,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Fragment, useContext, useEffect, useState } from "react";
+import { Fragment, useContext, useEffect, useRef, useState } from "react";
 import { AppContext } from "../../contexts/AppContext";
 import "./Queue.sass";
 
 interface QueueProps {
     items: number[];
-    onPull?: () => void;
 }
 
-const QUEUE_SIZE = 4;
+const QUEUE_SIZE = 5;
 const ICON = [
     faBurger,
     faLemon,
@@ -28,13 +27,13 @@ const ICON = [
 
 let id = 1;
 
-export const Queue = ({ items = [1, 3, 5, 7], onPull }: QueueProps) => {
+export const Queue = ({ items = [1, 3, 5, 7] }: QueueProps) => {
     const { state } = useContext(AppContext);
-    const [shake, setShake] = useState(false);
+    const prevItems = useRef(items);
 
     const [queue, setQueue] = useState(
         items
-            .concat(Array(Math.max(0, 4 - items.length)).fill(null))
+            .concat(Array(Math.max(0, QUEUE_SIZE - items.length)).fill(null))
             .map((item, i) => ({
                 id: id++,
                 icon: ICON[i % 6],
@@ -46,18 +45,20 @@ export const Queue = ({ items = [1, 3, 5, 7], onPull }: QueueProps) => {
         if (state.playing === true && state.currentTicket === 0)
             setQueue(
                 items
-                    .concat(Array(Math.max(0, 4 - items.length)).fill(null))
+                    .concat(
+                        Array(Math.max(0, QUEUE_SIZE - items.length)).fill(null)
+                    )
                     .map((item, i) => ({
                         id: id++,
                         icon: ICON[i % 6],
                         active: item !== null,
                     }))
             ),
-            id = 1
+                (id = 1);
     }, [state.playing]);
 
     useEffect(() => {
-        if (queue.length > items.length) {
+        if (prevItems.current.length > items.length) {
             setQueue((queue) =>
                 queue.slice(1).concat([
                     {
@@ -67,11 +68,10 @@ export const Queue = ({ items = [1, 3, 5, 7], onPull }: QueueProps) => {
                     },
                 ])
             );
-            onPull && onPull();
             return;
         }
 
-        if (queue.length < items.length) {
+        if (prevItems.current.length < items.length) {
             setQueue((queue) => {
                 const activeSlots = queue.filter((item) => item.active);
 
@@ -86,8 +86,7 @@ export const Queue = ({ items = [1, 3, 5, 7], onPull }: QueueProps) => {
             });
         }
 
-        setShake(false);
-        setShake(true);
+        prevItems.current = items
     }, [items]);
 
     return (
@@ -111,34 +110,15 @@ export const Queue = ({ items = [1, 3, 5, 7], onPull }: QueueProps) => {
             {queue.filter((item) => item.active).length > QUEUE_SIZE && (
                 <Fragment>
                     <span
-                        className={`queue__more ${
-                            shake && "queue__more--shake"
-                        }`}
-                        onAnimationEnd={() => setShake(false)}
+                        className={`queue__more`}
                     >
-                        ...
+                        +
+                        {
+                            queue
+                                .slice(QUEUE_SIZE)
+                                .filter((item) => item.active).length
+                        }
                     </span>
-                    <ul className="queue__sublist">
-                        {queue
-                            .slice(4)
-                            .filter((item) => item.active)
-                            .map((item, i) => (
-                                <li
-                                    key={item.id}
-                                    className={`queue__item ${
-                                        item.active && "queue__item--filled"
-                                    }`}
-                                >
-                                    <FontAwesomeIcon
-                                        icon={item.icon}
-                                        className="queue__icon"
-                                    />
-                                    <span className="queue__pos">
-                                        {i + 1 + QUEUE_SIZE}º
-                                    </span>
-                                </li>
-                            ))}
-                    </ul>
                 </Fragment>
             )}
         </div>

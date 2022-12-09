@@ -1,10 +1,10 @@
 @use '@sass/variables' as *
 
 .resource
-    max-width: 200px
-    width: 100%
+    width: 280px
     cursor: grab
     overflow: hidden
+    box-sizing: border-box
     border-radius: 10px
 
     &:active
@@ -23,14 +23,22 @@
         opacity: 0
         transition: opacity 200ms ease
 
+.resource__header
+    display: grid
+    row-gap: 10px
+    background: $dark-green-300
+    padding: 10px 0
+
 .resource--overcharge,
 .resource--alert
     &::after
         opacity: 1
 
 .resource--overcharge
-    .resource__icon
+    .resource__header
         background: $red-400
+
+    .resource__icon
         animation: shake 1.5s cubic-bezier(.36,.07,.19,.97) both
         animation-iteration-count: infinite
         transform: translate3d(0, 0, 0)
@@ -39,19 +47,28 @@
     &::after
         border-color: $yellow-400
 
-    .resource__icon
+    .resource__header
         background: $yellow-400
+
+    .resource__title
+        color: $grey-700
+
+    .resource__icon
         color: $grey-700
 
 .resource__icon
-    background: $dark-green-300
-    width: 120%
+    width: 100%
+    color: white
     text-align: center
     font-size: 4em
-    padding: 20px 0
-    margin-left: -10%
-    border-radius: 10px 10px 0 0
-    transition: background 200ms ease
+
+.resource__title
+    text-align: center
+    font-size: 1.25rem
+    color: white
+    font-weight: 900
+    padding: 0 5%
+    margin: 0
 
 .resource__usage
     display: flex
@@ -112,6 +129,7 @@
 .resource__metric
     display: grid
     grid-template-columns: 2fr 1fr
+    column-gap: 15px
 
 .resource__label
     font-weight: bold

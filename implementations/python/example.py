@@ -26,13 +26,12 @@ import lemonlab
 RANDOM_SEED = 42
 GAS_STATION_SIZE = 200     # liters
 THRESHOLD = 10             # Threshold for calling the tank truck (in %)
-FUEL_TANK_SIZE = 50        # liters
+FUEL_TANK_SIZE = 35        # liters
 FUEL_TANK_LEVEL = [5, 25]  # Min/max levels of fuel tanks (in liters)
-REFUELING_SPEED = 0.01        # liters / second
+REFUELING_SPEED = 0.001       # liters / second
 TANK_TRUCK_TIME = 300      # Seconds it takes the tank truck to arrive
-T_INTER = [30, 300]        # Create a car every [min, max] seconds
-SIM_TIME = 10000            # Simulation time in seconds
-
+T_INTER = [3000, 5000]        # Create a car every [min, max] seconds
+SIM_TIME = 500000            # Simulation time in seconds
 
 def car(name, env, gas_station, fuel_pump, bomba: lemonlab.Resource):
     """A car arrives at the gas station for refueling.
@@ -43,23 +42,24 @@ def car(name, env, gas_station, fuel_pump, bomba: lemonlab.Resource):
 
     """
     fuel_tank_level = random.randint(*FUEL_TANK_LEVEL)
-    print('%s arriving at gas station at %.1f' % (name, env.now))
+    bomba.setMetric(
+            lemonlab.ArrivalRateCalculator(
+                bomba.getStats().getData()).compute()
+        )
+    # print('%s arriving at gas station at %.1f' % (name, env.now))
+    # print("FILA DA BOMBA:", len(gas_station.queue))
 
-    print("FILA DA BOMBA:", len(gas_station.queue))
     with gas_station.request() as req:
         start = env.now
 
         queuePos = len(gas_station.queue)
+        awaitQueue = None
 
         if(queuePos > 0):
             bomba.pushQueue()
+            awaitQueue = lemonlab.AwaitQueueCalculator(
+                bomba.getStats().getData(), True)
 
-        bomba.setMetric(
-            lemonlab.ArrivalRateCalculator(
-                bomba.getStats().getData()).compute()
-        )
-        awaitQueue = lemonlab.AwaitQueueCalculator(
-            bomba.getStats().getData(), True)
         bomba.setMetric(
             lemonlab.UsageCalculator({
                 "arrivalRate": bomba.getMetrics().getData('arrivalRate'),
@@ -69,7 +69,6 @@ def car(name, env, gas_station, fuel_pump, bomba: lemonlab.Resource):
         bomba.takeSnapshot()
         # Request one of the gas pumps
         yield req
-
         if(queuePos > 0):
             bomba.pullQueue()
             bomba.takeSnapshot()
@@ -95,17 +94,18 @@ def car(name, env, gas_station, fuel_pump, bomba: lemonlab.Resource):
                 "serviceRate": bomba.getMetrics().getData('serviceRate')
             }).compute()
         )
-        bomba.setMetric(awaitQueue.compute())
-        bomba.setMetric(
-            lemonlab.AwaitSystemCalculator({
-                "awaitQueue": bomba.getMetrics().getData('awaitQueue'),
-                "serviceTime": bomba.getMetrics().getData('serviceTime')
-            }).compute()
+        if(awaitQueue != None):
+            bomba.setMetric(awaitQueue.compute())
+            bomba.setMetric(
+                lemonlab.AwaitSystemCalculator({
+                    "awaitQueue": bomba.getMetrics().getData('awaitQueue'),
+                    "serviceTime": bomba.getMetrics().getData('serviceTime')
+                }).compute()
         )
         tanque.updatePercentage(fuel_pump.level / fuel_pump.capacity * 100)
         bomba.takeSnapshot()
-        print('%s finished refueling in %.1f seconds.' %
-              (name, env.now - start))
+        # print('%s finished refueling in %.1f seconds.' %
+            #   (name, env.now - start))
 
 
 def gas_station_control(env, fuel_pump, tanque):
@@ -148,8 +148,8 @@ gas_station = simpy.Resource(env, 2)
 fuel_pump = simpy.Container(env, GAS_STATION_SIZE, init=GAS_STATION_SIZE)
 
 lemon = lemonlab.Start("Simulação de Posto")
-bomba = lemon.createResource(lemonlab.Resource("Bomba de combustível 1"))
-tanque = lemon.createResource(lemonlab.Container("Tanque de combustível 1"))
+bomba = lemon.createResource(lemonlab.Resource("Bomba de combustível"))
+tanque = lemon.createResource(lemonlab.Container("Tanque de combustível"))
 
 env.process(gas_station_control(env, fuel_pump, tanque))
 env.process(car_generator(env, gas_station, fuel_pump, bomba))

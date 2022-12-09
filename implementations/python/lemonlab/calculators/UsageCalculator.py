@@ -6,6 +6,6 @@ class UsageCalculator(BaseCalculator):
         serviceRate = self.getData('serviceRate')
 
         if(not arrivalRate or not serviceRate):
-            return ('usage', 100)
+            return ('usage', None)
 
-        return ('usage', (arrivalRate / serviceRate) * 100)
+        return ('usage', min((arrivalRate / serviceRate) * 100, 100))

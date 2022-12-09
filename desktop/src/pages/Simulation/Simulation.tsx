@@ -56,9 +56,8 @@ export const Simulation = () => {
                             key={slot.x + slot.y + ""}
                             x={slot.x}
                             y={slot.y}
-                            queue={resource.queue}
                         >
-                            <Resource metrics={resource.metrics} />
+                            <Resource name={resource.name} metrics={resource.metrics} />
                             <Queue items={resource.queue}></Queue>
                         </Bridge>
                     );

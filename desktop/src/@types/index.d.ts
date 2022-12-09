@@ -8,7 +8,12 @@ declare global {
         userTime: number,
         endTime: number,
         metrics: {
-            usage: number|null
+            usage: number|null,
+            arrivalRate: number|null,
+            serviceRate: number|null,
+            serviceTime: number|null,
+            awaitSystem: number|null,
+            awaitQueue: number|null,
         },
         queue: number[]
     }

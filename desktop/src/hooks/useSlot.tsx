@@ -7,7 +7,7 @@ interface Coords {
 
 const GAP = 50;
 const WINDOW_WIDTH = window.innerWidth - GAP * 2;
-const ITEM_WIDTH = 200;
+const ITEM_WIDTH = 280;
 const ITEM_HEIGHT = 450;
 const ITEMS_PER_ROW = Math.floor(WINDOW_WIDTH / (ITEM_WIDTH + GAP));
 
