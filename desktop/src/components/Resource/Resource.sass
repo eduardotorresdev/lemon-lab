@@ -1,0 +1,132 @@
+@use '@sass/variables' as *
+
+.resource
+    max-width: 200px
+    width: 100%
+    cursor: grab
+    overflow: hidden
+    border-radius: 10px
+
+    &:active
+        cursor: grabbing
+
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        border: 3px solid $red-400
+        border-radius: 10px
+        box-sizing: border-box
+        opacity: 0
+        transition: opacity 200ms ease
+
+.resource--overcharge,
+.resource--alert
+    &::after
+        opacity: 1
+
+.resource--overcharge
+    .resource__icon
+        background: $red-400
+        animation: shake 1.5s cubic-bezier(.36,.07,.19,.97) both
+        animation-iteration-count: infinite
+        transform: translate3d(0, 0, 0)
+
+.resource--alert
+    &::after
+        border-color: $yellow-400
+
+    .resource__icon
+        background: $yellow-400
+        color: $grey-700
+
+.resource__icon
+    background: $dark-green-300
+    width: 120%
+    text-align: center
+    font-size: 4em
+    padding: 20px 0
+    margin-left: -10%
+    border-radius: 10px 10px 0 0
+    transition: background 200ms ease
+
+.resource__usage
+    display: flex
+    background: $grey-600
+    padding: 15px
+
+.resource__unit
+    background: $grey-500
+    flex: 1
+    height: 6px
+    margin: 0 1px
+    transition: all 150ms ease
+
+    &:first-child
+        border-radius: 6px 0 0 6px
+
+    &:last-child
+        border-radius: 0 6px 6px 0
+
+.resource__unit--active
+    $red: 87
+    $green: 208
+    $blue: 87
+
+    @for $i from 1 through 5
+        &:nth-child(#{$i})
+            background-color: rgba($red, $green, $blue)
+
+        $red: $red + 30
+        $green: $green
+        $blue: $blue - 5
+
+    $red: 216
+    $green: 193
+    $blue: 44
+
+    @for $i from 5 through 10
+        &:nth-child(#{$i})
+            background-color: rgba($red, $green, $blue)
+
+        $red: $red + 5
+        $green: $green - 30
+        $blue: $blue - 5
+
+.resource__percentage
+    display: none
+
+.resource__metrics
+    display: grid
+    grid-template-columns: 1fr
+    row-gap: 15px
+    background: $grey-700
+    font-size: 12px
+    font-weight: 500
+    padding: 15px
+    border-radius: 0 0 10px 10px
+
+.resource__metric
+    display: grid
+    grid-template-columns: 2fr 1fr
+
+.resource__label
+    font-weight: bold
+
+// .resource__value
+
+@keyframes shake
+    5%, 80%
+        transform: translate3d(-1px, 0, 0)
+
+    10%, 60%
+        transform: translate3d(2px, 0, 0)
+
+    15%, 25%, 35%
+        transform: translate3d(-4px, 0, 0)
+
+    20%, 30%
+        transform: translate3d(4px, 0, 0)

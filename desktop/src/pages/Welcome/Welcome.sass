@@ -1,0 +1,95 @@
+@use '@sass/variables' as *
+
+.welcome
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    top: -5%
+    left: 0
+    z-index: 3
+    background: rgba(0, 0, 0, 0.2)
+    width: 100%
+    height: 100%
+    opacity: 0
+    pointer-events: none
+    backdrop-filter: blur(30px)
+    transition: opacity 300ms ease
+
+    .button
+        pointer-events: none
+
+    &--show
+        opacity: 1
+        pointer-events: all
+
+        .button
+            pointer-events: all
+
+.welcome__dialog
+    display: grid
+    grid-template-columns: 1fr
+    row-gap: 10px
+    justify-content: center
+    background: transparentize($grey-700, 0.6)
+    padding: 5% 5% 2%
+    border-radius: 12px
+
+.welcome__wrapper
+    display: grid
+    grid-auto-flow: column
+    column-gap: 30px
+
+.welcome__title
+    grid-column: 1/3
+    font-size: 2.5em
+    color: white
+    justify-self: center
+    margin: 10px 0 50px
+
+    strong
+        font-weight: bold
+
+.welcome__section
+    display: grid
+    grid-template-columns: 1fr
+    row-gap: 10px
+    align-content: start
+
+.welcome__subtitle
+    font-size: 1.2em
+    font-weight: bold
+    color: $light-green-300
+
+.welcome__list
+    display: grid
+    grid-template-columns: 1fr
+    row-gap: 10px
+    margin-top: 10px
+
+.welcome__item
+    display: grid
+    grid-template-columns: 1fr auto
+    align-items: center
+    background: $grey-800
+    padding: 10px 6px 10px 10px
+    cursor: pointer
+    border-radius: 6px
+
+.welcome__name
+    text-decoration: underline
+
+.welcome__file
+    background: $grey-700
+    font-size: 0.9em
+    padding: 5px
+    border-radius: 6px
+    margin-left: 70px
+
+.welcome__credits
+    grid-column: 1/3
+    font-size: 14px
+    font-weight: bold
+    color: $grey-300
+    text-align: center
+    margin-top: 8%

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@components": ["./src/components/index.ts"],
+      "@contexts": ["./src/contexts/index.ts"],
+      "@sass/*": ["./src/sass/*"],
+      "@img/*": ["./src/img/*"],
+      "@hooks": ["./src/hooks/index.ts"],
+      "@helpers": ["./src/helpers/index.ts"],
+      "@pages": ["./src/pages/index.ts"],
+      "@hooks/*": ["./src/hooks/*"],
+    }
+  },
+  "files": ["src/index.tsx"],
+  "include": ["src/@types/index.d.ts"],
+}

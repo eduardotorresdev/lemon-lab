@@ -1,0 +1,85 @@
+@use '@sass/variables' as *
+
+.frame
+    display: grid
+    grid-template-columns: 1fr 5fr 1fr
+    grid-template-areas: 'controls title misc'
+    background: $grey-700
+    -webkit-app-region: drag
+
+.frame--win
+    grid-template-areas: 'misc title controls'
+
+    .frame__controls
+        justify-content: flex-end
+
+    .frame__control
+        background: $grey-700
+        width: 50px
+        height: 100%
+        border-radius: 0
+        margin: 0
+
+        &:hover
+            background: $grey-800
+
+    .frame__control--close
+        order: 3
+
+    .frame__control--minimize
+        order: 1
+
+    .frame__control--maximize
+        order: 2
+
+    .frame__icon
+        width: 15px
+        height: 15px
+        color: $grey-300
+        opacity: 1
+
+.frame__title
+    grid-area: title
+    color: $grey-300
+    text-align: center
+    margin: 8px 0
+    -webkit-user-select: none
+
+.frame__controls
+    display: flex
+    flex: 0
+    align-items: center
+    grid-area: controls
+    -webkit-app-region: no-drag
+
+.frame__control
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 12px
+    height: 12px
+    background: $grey-500
+    color: $grey-300
+    border: 0
+    border-radius: 100%
+    margin-left: 10px
+    cursor: pointer
+
+    &:hover .frame__icon
+        opacity: 1
+
+.frame__control--close
+    background: $red-400
+
+.frame__control--minimize
+    background: $yellow-500
+
+.frame__control--maximize
+    background: $green-500
+
+.frame__icon
+    width: 10px
+    height: 10px
+    color: rgba(0, 0, 0, 0.5)
+    opacity: 0
+    transition: all 150ms ease

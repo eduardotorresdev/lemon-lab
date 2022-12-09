@@ -1,0 +1,49 @@
+@use '@sass/variables' as *
+
+.bridge
+    position: absolute
+    top: 0
+    left: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.bridge__item
+    position: relative
+    z-index: 1
+
+.bridge__connector
+    position: relative
+    background: $grey-500
+    width: 6px
+    height: 60px
+    border-radius: 4px
+    margin: 2px 0
+    overflow: hidden
+
+    span
+        display: none
+
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        bottom: -60%
+        width: 100%
+        height: 60%
+        background: $green-500
+        border-radius: 6px
+        transform: translateY(0%)
+
+.bridge__connector--sending::after
+    animation-name: sendPackage
+    animation-duration: 300ms
+    animation-timing-function: ease
+    animation-iteration-count: 1
+
+@keyframes sendPackage
+    from
+        transform: translateY(0%)
+
+    to
+        transform: translateY(-300%)
