@@ -30,6 +30,12 @@
         .queue__icon
             opacity: 1
 
+    &--interrupted
+        background: $red-500
+
+        .queue__icon
+            opacity: 1
+
 .queue__icon
     opacity: 0
     transition: opacity 200ms ease
@@ -54,6 +60,18 @@
     background: $grey-700
     border-radius: 3px
     transform: translate(-50%, 4px)
+
+.queue__priority
+    position: absolute
+    top: 100%
+    left: 50%
+    width: 100%
+    text-align: center
+    font-family: monospace
+    font-weight: 900
+    color: $grey-800
+    background: $yellow-500
+    transform: translate(-50%, 24px)
 
 @keyframes shake
     10%, 90%

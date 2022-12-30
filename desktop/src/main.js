@@ -2,8 +2,30 @@
 const path = require('path');
 const fs = require('fs/promises');
 
-const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+const { app, BrowserWindow, Menu, ipcMain, dialog } = require('electron');
 const isDev = require('electron-is-dev');
+
+function setMainMenu() {
+    const template = [
+        {
+            role: 'appmenu',
+            submenu: [
+                { label: 'Abrir uma nova simulação' },
+                {
+                    label: 'Simulações recentes',
+                    submenu: [
+                        { label: 'Simulação de posto' }
+                    ]
+                },
+                { type: 'separator' },
+                { label: 'Fechar simulação ativa' },
+                { type: 'separator' },
+                { label: 'Encerrar @lemon-lab' },
+            ]
+        }
+    ];
+    Menu.setApplicationMenu(Menu.buildFromTemplate(template));
+}
 
 function createWindow() {
     const win = new BrowserWindow({
@@ -17,11 +39,11 @@ function createWindow() {
         },
         frame: false,
     });
-
+    setMainMenu();
     win.loadURL(
         isDev
             ? 'http://localhost:8080'
-            : `file://${path.join(__dirname, '../build/index.html')}`
+            : `file://${path.join(__dirname, '../dist/index.html')}`
     );
 
     if (isDev) {

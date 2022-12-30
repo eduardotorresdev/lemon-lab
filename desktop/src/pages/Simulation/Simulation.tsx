@@ -58,7 +58,7 @@ export const Simulation = () => {
                             y={slot.y}
                         >
                             <Resource name={resource.name} metrics={resource.metrics} />
-                            <Queue items={resource.queue}></Queue>
+                            <Queue items={resource.queue} type={resource.type}></Queue>
                         </Bridge>
                     );
                 })}

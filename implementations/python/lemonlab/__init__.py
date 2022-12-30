@@ -1,5 +1,6 @@
 from .Start import Start
 from .models.Resource import Resource, ResourceInterface
+from .models.ResourcePriority import ResourcePriority
 from .models.Container import Container
 from .models.Store import Store
 from .calculators.ArrivalRateCalculator import ArrivalRateCalculator

@@ -5,6 +5,7 @@ import {
     faBurger,
     faCookie,
     faPizzaSlice,
+    faTriangleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Fragment, useContext, useEffect, useRef, useState } from "react";
@@ -12,7 +13,11 @@ import { AppContext } from "../../contexts/AppContext";
 import "./Queue.sass";
 
 interface QueueProps {
-    items: number[];
+    type: "normal" | "priority";
+    items: {
+        id: number;
+        priority: number;
+    }[];
 }
 
 const QUEUE_SIZE = 5;
@@ -23,101 +28,95 @@ const ICON = [
     faBreadSlice,
     faCookie,
     faBowlFood,
+    faTriangleExclamation,
 ];
 
-let id = 1;
-
-export const Queue = ({ items = [1, 3, 5, 7] }: QueueProps) => {
+export const Queue = ({ items = [], type = "normal" }: QueueProps) => {
     const { state } = useContext(AppContext);
     const prevItems = useRef(items);
 
     const [queue, setQueue] = useState(
-        items
-            .concat(Array(Math.max(0, QUEUE_SIZE - items.length)).fill(null))
-            .map((item, i) => ({
-                id: id++,
-                icon: ICON[i % 6],
-                active: item !== null,
-            }))
+        items.map((item) => ({
+            id: item.id,
+            priority: item.priority,
+            icon: ICON[item.id % 6],
+        }))
     );
 
     useEffect(() => {
         if (state.playing === true && state.currentTicket === 0)
             setQueue(
-                items
-                    .concat(
-                        Array(Math.max(0, QUEUE_SIZE - items.length)).fill(null)
-                    )
-                    .map((item, i) => ({
-                        id: id++,
-                        icon: ICON[i % 6],
-                        active: item !== null,
-                    }))
-            ),
-                (id = 1);
+                items.map((item) => ({
+                    id: item.id,
+                    priority: item.priority,
+                    icon: ICON[item.id % 6],
+                }))
+            );
     }, [state.playing]);
 
     useEffect(() => {
         if (prevItems.current.length > items.length) {
-            setQueue((queue) =>
-                queue.slice(1).concat([
-                    {
-                        id: queue[0].id,
-                        icon: ICON[queue.length % 6],
-                        active: false,
-                    },
-                ])
-            );
+            setQueue((queue) => queue.slice(1));
             return;
         }
 
         if (prevItems.current.length < items.length) {
-            setQueue((queue) => {
-                const activeSlots = queue.filter((item) => item.active);
-
-                const arr = [...queue];
-                arr[activeSlots.length] = {
-                    id: id++,
-                    icon: ICON[id % 6],
-                    active: true,
-                };
-
-                return arr;
-            });
+            setQueue(
+                items.map((item) => ({
+                    id: item.id,
+                    priority: item.priority,
+                    icon: ICON[item.id % 6],
+                }))
+            );
         }
 
-        prevItems.current = items
+        prevItems.current = items;
     }, [items]);
+
+    let pos = 1;
 
     return (
         <div className="queue">
             <ul className="queue__list">
-                {queue.slice(0, QUEUE_SIZE).map((item, i) => (
+                {queue.slice(0, QUEUE_SIZE).map((item) => (
                     <li
                         key={item.id}
-                        className={`queue__item ${
-                            item.active && "queue__item--filled"
+                        className={`queue__item queue__item--filled ${
+                            item.priority === -1 && "queue__item--interrupted"
                         }`}
                     >
                         <FontAwesomeIcon
-                            icon={item.icon}
+                            icon={item.priority === -1 ? ICON[6] : item.icon}
                             className="queue__icon"
                         />
-                        <span className="queue__pos">{i + 1}º</span>
+                        <span className="queue__pos">{pos++}º</span>
+                        {type === "priority" && item.priority !== -1 && (
+                            <span className="queue__priority">
+                                {item.priority}
+                            </span>
+                        )}
                     </li>
                 ))}
+                {queue.length < QUEUE_SIZE &&
+                    Array(Math.max(0, QUEUE_SIZE - queue.length))
+                        .fill({
+                            id: 0,
+                            icon: ICON[0],
+                        })
+                        .map((item, i) => (
+                            <li key={i} className="queue__item">
+                                <FontAwesomeIcon
+                                    icon={item.icon}
+                                    className="queue__icon"
+                                />
+                                <span className="queue__pos">{pos++}º</span>
+                            </li>
+                        ))}
             </ul>
-            {queue.filter((item) => item.active).length > QUEUE_SIZE && (
+            {queue.length > QUEUE_SIZE && (
                 <Fragment>
-                    <span
-                        className={`queue__more`}
-                    >
-                        +
-                        {
-                            queue
-                                .slice(QUEUE_SIZE)
-                                .filter((item) => item.active).length
-                        }
+                    <span className={`queue__more`}>
+                        +{queue.slice(QUEUE_SIZE).length}
                     </span>
                 </Fragment>
             )}

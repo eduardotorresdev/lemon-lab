@@ -48,65 +48,65 @@ def car(name, env, gas_station, fuel_pump, bomba: lemonlab.Resource):
         )
     # print('%s arriving at gas station at %.1f' % (name, env.now))
     # print("FILA DA BOMBA:", len(gas_station.queue))
+    priority = random.randint(0, 10)
+    try:
+        with gas_station.request(priority) as req:
+            start = env.now
 
-    with gas_station.request() as req:
-        start = env.now
+            queuePos = len(gas_station.queue)
+            awaitQueue = None
 
-        queuePos = len(gas_station.queue)
-        awaitQueue = None
+            if(queuePos > 0):
+                bomba.pushQueue(priority)
+                awaitQueue = lemonlab.AwaitQueueCalculator(
+                    bomba.getStats().getData(), True)
 
-        if(queuePos > 0):
-            bomba.pushQueue()
-            awaitQueue = lemonlab.AwaitQueueCalculator(
-                bomba.getStats().getData(), True)
-
-        bomba.setMetric(
-            lemonlab.UsageCalculator({
-                "arrivalRate": bomba.getMetrics().getData('arrivalRate'),
-                "serviceRate": bomba.getMetrics().getData('serviceRate')
-            }).compute()
-        )
-        bomba.takeSnapshot()
-        # Request one of the gas pumps
-        yield req
-        if(queuePos > 0):
-            bomba.pullQueue()
-            bomba.takeSnapshot()
-
-        # Get the required amount of fuel
-        liters_required = FUEL_TANK_SIZE - fuel_tank_level
-        yield fuel_pump.get(liters_required)
-
-        # The "actual" refueling process takes some time
-        yield env.timeout(liters_required / REFUELING_SPEED)
-        bomba.setMetric(
-            lemonlab.ServiceRateCalculator(
-                bomba.getStats().getData()).compute()
-        )
-        bomba.setMetric(
-            lemonlab.UsageCalculator({
-                "arrivalRate": bomba.getMetrics().getData('arrivalRate'),
-                "serviceRate": bomba.getMetrics().getData('serviceRate')
-            }).compute()
-        )
-        bomba.setMetric(
-            lemonlab.ServiceTimeCalculator({
-                "serviceRate": bomba.getMetrics().getData('serviceRate')
-            }).compute()
-        )
-        if(awaitQueue != None):
-            bomba.setMetric(awaitQueue.compute())
             bomba.setMetric(
-                lemonlab.AwaitSystemCalculator({
-                    "awaitQueue": bomba.getMetrics().getData('awaitQueue'),
-                    "serviceTime": bomba.getMetrics().getData('serviceTime')
+                lemonlab.UsageCalculator({
+                    "arrivalRate": bomba.getMetrics().getData('arrivalRate'),
+                    "serviceRate": bomba.getMetrics().getData('serviceRate')
                 }).compute()
-        )
-        tanque.updatePercentage(fuel_pump.level / fuel_pump.capacity * 100)
-        bomba.takeSnapshot()
-        # print('%s finished refueling in %.1f seconds.' %
-            #   (name, env.now - start))
+            )
+            bomba.takeSnapshot()
+            # Request one of the gas pumps
+            yield req
+            if(queuePos > 0):
+                bomba.pullQueue()
+                bomba.takeSnapshot()
 
+            # Get the required amount of fuel
+            liters_required = FUEL_TANK_SIZE - fuel_tank_level
+            yield fuel_pump.get(liters_required)
+
+            # The "actual" refueling process takes some time
+            yield env.timeout(liters_required / REFUELING_SPEED)
+            bomba.setMetric(
+                lemonlab.ServiceRateCalculator(
+                    bomba.getStats().getData()).compute()
+            )
+            bomba.setMetric(
+                lemonlab.UsageCalculator({
+                    "arrivalRate": bomba.getMetrics().getData('arrivalRate'),
+                    "serviceRate": bomba.getMetrics().getData('serviceRate')
+                }).compute()
+            )
+            bomba.setMetric(
+                lemonlab.ServiceTimeCalculator({
+                    "serviceRate": bomba.getMetrics().getData('serviceRate')
+                }).compute()
+            )
+            if(awaitQueue != None):
+                bomba.setMetric(awaitQueue.compute())
+                bomba.setMetric(
+                    lemonlab.AwaitSystemCalculator({
+                        "awaitQueue": bomba.getMetrics().getData('awaitQueue'),
+                        "serviceTime": bomba.getMetrics().getData('serviceTime')
+                    }).compute()
+            )
+            tanque.updatePercentage(fuel_pump.level / fuel_pump.capacity * 100)
+            bomba.takeSnapshot()
+    except simpy.Interrupt:
+        bomba.interrupt()
 
 def gas_station_control(env, fuel_pump, tanque):
     """Periodically check the level of the *fuel_pump* and call the tank
@@ -144,11 +144,11 @@ random.seed(RANDOM_SEED)
 
 # Create environment and start processes
 env = simpy.Environment()
-gas_station = simpy.Resource(env, 2)
+gas_station = simpy.PriorityResource(env, 2)
 fuel_pump = simpy.Container(env, GAS_STATION_SIZE, init=GAS_STATION_SIZE)
 
 lemon = lemonlab.Start("Simulação de Posto")
-bomba = lemon.createResource(lemonlab.Resource("Bomba de combustível"))
+bomba = lemon.createResource(lemonlab.ResourcePriority("Bomba de combustível"))
 tanque = lemon.createResource(lemonlab.Container("Tanque de combustível"))
 
 env.process(gas_station_control(env, fuel_pump, tanque))

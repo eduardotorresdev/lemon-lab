@@ -7,43 +7,46 @@ from ..interfaces.ResourceInterface import ResourceInterface
 
 
 class Resource(ResourceInterface):
-    __queueId: int = 0
-    __usage: int
-    __queue: list[int]
-    __metrics: MetricProvider
-    __stats: StatsProvider
-    __events: EventProvider
+    _queueId: int = 0
+    _usage: int
+    _type = 'normal'
+    _queue: list[dict]
+    _metrics: MetricProvider
+    _stats: StatsProvider
+    _events: EventProvider
 
     def __init__(self, name) -> None:
         super().__init__(name)
-        self.__queue = []
-        self.__usage = 0
-        self.__metrics = MetricProvider()
-        self.__stats = StatsProvider()
-        self.__events = EventProvider(self, self.__stats, self.__metrics)
+        self._queue = []
+        self._usage = 0
+        self._metrics = MetricProvider()
+        self._stats = StatsProvider()
+        self._events = EventProvider(self, self._stats, self._metrics)
 
     def getEvents(self):
-        return self.__events
+        return self._events
 
     def getMetrics(self):
-        return self.__metrics
+        return self._metrics
 
     def getStats(self):
-        return self.__stats
+        return self._stats
 
     def pushQueue(self):
-        self.__queueId += 1
+        self._queueId += 1
         queue = self.getQueue()
-        queue.append(self.__queueId)
-        self.__queue = queue
+        queue.append({
+            "id": self._queueId
+        })
+        self._queue = queue
 
     def pullQueue(self):
         queue = self.getQueue()
         queue.pop(0)
-        self.__queue = queue
+        self._queue = queue
 
     def getQueue(self):
-        return self.__queue.copy()
+        return self._queue.copy()
 
     def setMetric(self, data):
         self.getMetrics().setData(data[0], data[1])
@@ -51,9 +54,10 @@ class Resource(ResourceInterface):
     def toJson(self) -> tuple[str, any]:
         return ("resources", {
             'name': self.getName(),
-            'usage': self.__usage,
-            'queue': self.__queue,
-            'metrics': self.__metrics.toJson()
+            'type': self._type,
+            'usage': self._usage,
+            'queue': self._queue,
+            'metrics': self._metrics.toJson()
         })
 
     def takeSnapshot(self):

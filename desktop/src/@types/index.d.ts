@@ -4,6 +4,7 @@ export {};
 declare global {
     interface Resource {
         name: string,
+        type: 'normal'|'priority',
         servedTime: number,
         userTime: number,
         endTime: number,
@@ -15,7 +16,10 @@ declare global {
             awaitSystem: number|null,
             awaitQueue: number|null,
         },
-        queue: number[]
+        queue: {
+            id: number,
+            priority: number
+        }[]
     }
     
     interface Ticket {
