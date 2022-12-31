@@ -1,0 +1,75 @@
+@use '@sass/variables' as *
+
+.menu
+    position: relative
+    display: flex
+    width: 100%
+    z-index: 10
+    background: $grey-700
+    padding: 5px 30px
+
+.menu__list
+    display: grid
+    grid-auto-flow: column
+    list-style-type: none
+    padding: 0
+
+    .menu__list
+        background: $grey-700
+        position: absolute
+        top: 30px
+        left: 20px
+        grid-auto-flow: row
+        padding: 10px 0
+        border-radius: 0 0 8px 8px
+
+        .menu__item
+            position: relative
+            border-bottom: 1px solid $grey-500
+            border-radius: 0
+
+            &:hover .menu__list
+                opacity: 1
+                pointer-events: all
+
+        .menu__link
+            width: 100%
+            white-space: nowrap
+            font-size: 0.875rem
+            border-radius: 0
+            padding: 10px 20px
+
+        .menu__list
+            top: 0
+            left: 100%
+            opacity: 0
+            pointer-events: none
+            border-radius: 0 8px 8px 8px
+
+.menu__item
+    position: relative
+
+    .menu__list
+        opacity: 0
+        pointer-events: none
+
+.menu__link:hover
+    background: $grey-800
+
+.menu__item--open
+    .menu__list
+        pointer-events: all
+        opacity: 1
+
+.menu__link
+    display: inline-block
+    padding: 5px 20px
+    cursor: pointer
+    color: $grey-300
+    border-radius: 8px
+    text-decoration: none
+
+.menu__link--disabled
+    opacity: 0.5
+    pointer-events: none
+    background: darken($grey-800, 20%)

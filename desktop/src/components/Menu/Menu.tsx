@@ -1,0 +1,124 @@
+import { useProject } from "@hooks";
+import React, { ReactNode, useContext, useEffect, useRef, useState } from "react";
+import { AppContext } from "@contexts";
+import "./Menu.sass";
+
+type MenuLinkProps = {
+    children: ReactNode
+    disabled?: boolean,
+    onClick: (e?: React.MouseEvent<HTMLAnchorElement>) => void
+}
+
+const MenuLink = ({ children, disabled = false, onClick }: MenuLinkProps) => {
+    const linkHandler = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+
+        onClick(e)
+    }
+
+    return (
+        <a href="/" className={`menu__link ${disabled && 'menu__link--disabled'}`} onClick={linkHandler}>
+            {children}
+        </a>
+    )
+}
+
+type MenuDropdownProps = {
+    title: string,
+    children: ReactNode
+}
+
+const MenuDropdown = ({
+    title,
+    children
+}: MenuDropdownProps) => {
+    const ref = useRef<HTMLLIElement | undefined>();
+    const [open, setOpen] = useState(false)
+
+    const openHandler = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        setOpen(open => !open)
+    }
+
+    useEffect(() => {
+        const listener = function (this: HTMLElement, e: MouseEvent) {
+            if (!ref.current?.contains(e.target as HTMLElement))
+                setOpen(false)
+        }
+        document.body.addEventListener('click', listener)
+    }, [])
+
+    return (
+        <li ref={ref} className={`menu__item ${open && 'menu__item--open'}`}>
+            <MenuLink onClick={openHandler}>
+                {title}
+            </MenuLink>
+
+            <ul className="menu__list">
+                {children}
+            </ul>
+        </li>
+    )
+}
+
+export const Menu = () => {
+    const { importFile, projects, openProject } = useProject();
+    const { state, setState } = useContext(AppContext)
+
+    return (
+        <div className="menu">
+            <ul className="menu__list">
+                <MenuDropdown title="@lemon-lab">
+                    <MenuLink onClick={importFile}>
+                        Abrir uma nova simulação
+                    </MenuLink>
+                    <MenuDropdown title="Simulações recentes">
+                        {projects
+                            .reverse()
+                            .slice(0, 4)
+                            .map(([key, project]) => (
+                                <MenuLink key={key} onClick={() =>
+                                    openProject(project.hash)
+                                }>
+                                    {project.name}
+                                </MenuLink>
+                            ))}
+                    </MenuDropdown>
+                    <MenuLink
+                        disabled={state.activeProject === null}
+                        onClick={() => setState(state => ({
+                            ...state,
+                            activeProject: null
+                        }))}>
+                        Fechar simulação ativa
+                    </MenuLink>
+                    <MenuLink onClick={window.electron.quit}>
+                        Encerrar @lemon-lab
+                    </MenuLink>
+                </MenuDropdown>
+                <MenuDropdown title="Simulação">
+                    <MenuLink onClick={importFile}>
+                        Reproduzir
+                    </MenuLink>
+                    <MenuLink onClick={importFile}>
+                        Pausar
+                    </MenuLink>
+                    <MenuLink onClick={importFile}>
+                        Aumentar velocidade
+                    </MenuLink>
+                    <MenuLink onClick={importFile}>
+                        Diminuir velocidade
+                    </MenuLink>
+                    <MenuLink onClick={importFile}>
+                        Reiniciar
+                    </MenuLink>
+                </MenuDropdown>
+                <li className="menu__item">
+                    <a href="/" className="menu__link">
+                        Sobre
+                    </a>
+                </li>
+            </ul>
+        </div>
+    );
+};

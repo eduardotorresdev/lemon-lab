@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Frame } from "@components";
+import { Frame, Menu } from "@components";
 import './Wrapper.sass';
 
 interface WrapperProps {
@@ -10,6 +10,7 @@ export const Wrapper = ({ children }: WrapperProps) => {
     return (
         <div className="wrapper">
             <Frame />
+            <Menu />
             <div className="wrapper__content">{children}</div>
         </div>
     );
