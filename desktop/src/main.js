@@ -5,7 +5,7 @@ const fs = require('fs/promises');
 const { app, BrowserWindow, Menu, ipcMain, dialog } = require('electron');
 const isDev = require('electron-is-dev');
 
-function setMainMenu(win, projects = []) {
+function setMainMenu(win, projects = [], activeProject) {
     const template = [
         {
             role: 'appmenu',
@@ -24,6 +24,7 @@ function setMainMenu(win, projects = []) {
                 { type: 'separator' },
                 {
                     label: 'Fechar simulação ativa',
+                    enabled: activeProject !== null,
                     click: () => {
                         win.webContents.send('close-current-simulation')
                     }
@@ -41,27 +42,37 @@ function setMainMenu(win, projects = []) {
             label: 'Simulação',
             submenu: [
                 {
-                    label: 'Reproduzir', click: () => {
+                    label: 'Reproduzir',
+                    enabled: activeProject !== null,
+                    click: () => {
                         win.webContents.send('player-change-state', 'play')
                     }
                 },
                 {
-                    label: 'Pausar', click: () => {
+                    label: 'Pausar',
+                    enabled: activeProject !== null,
+                    click: () => {
                         win.webContents.send('player-change-state', 'pause')
                     }
                 },
                 {
-                    label: 'Aumentar velocidade', click: () => {
+                    label: 'Aumentar velocidade',
+                    enabled: activeProject !== null,
+                    click: () => {
                         win.webContents.send('player-change-state', 'speedUp')
                     }
                 },
                 {
-                    label: 'Diminuir velocidade', click: () => {
+                    label: 'Diminuir velocidade',
+                    enabled: activeProject !== null,
+                    click: () => {
                         win.webContents.send('player-change-state', 'speedDown')
                     }
                 },
                 {
-                    label: 'Reiniciar', click: () => {
+                    label: 'Reiniciar',
+                    enabled: activeProject !== null,
+                    click: () => {
                         win.webContents.send('player-change-state', 'restart')
                     }
                 },
@@ -106,8 +117,8 @@ function createWindow() {
         e.preventDefault();
         require('electron').shell.openExternal(url);
     });
-    ipcMain.on('projects', (event, projects) => {
-        setMainMenu(win, projects);
+    ipcMain.on('menuUpdate', (event, projects, activeProject) => {
+        setMainMenu(win, projects, activeProject);
     })
     ipcMain.on('close', () => app.quit())
     ipcMain.on('maximize', () => win.isMaximized() ? win.unmaximize() : win.maximize())

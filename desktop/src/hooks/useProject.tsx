@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../contexts/AppContext";
 
 export const useProject = () => {
-    const { setState } = useContext(AppContext);
+    const { state, setState } = useContext(AppContext);
     const [projects, setProjects] = useState(new Map<string, ProjectFile>());
     const [loading, setLoading] = useState(false);
 
@@ -23,7 +23,7 @@ export const useProject = () => {
             const response: ProjectImported =
                 await window.electron.importFile();
 
-            if(!response.file) return;
+            if (!response.file) return;
 
             const hash = sha256(response.filePath).toString();
 
@@ -124,20 +124,24 @@ export const useProject = () => {
     }, []);
 
     useEffect(() => {
-        if(projects.size > 0) window.electron.getProjects(Array.from(projects.values()))
-    }, [projects]);
+        if (projects.size > 0)
+            window.electron.menuUpdate(
+                Array.from(projects.values()),
+                state.activeProject
+            );
+    }, [projects, state.activeProject]);
 
     useEffect(() => {
-        window.electron.on('open-project', (event, hash) => {
-            openProject(hash)
-        })
-    }, [])
+        window.electron.on("open-project", (event, hash) => {
+            openProject(hash);
+        });
+    }, []);
 
     useEffect(() => {
-        window.electron.on('open-project-file', () => {
-            importFile()
-        })
-    }, [])
+        window.electron.on("open-project-file", () => {
+            importFile();
+        });
+    }, []);
 
     return {
         loading,

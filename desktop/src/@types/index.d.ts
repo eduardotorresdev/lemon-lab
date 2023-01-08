@@ -1,27 +1,27 @@
-export {};
+export { };
 
 
 declare global {
     interface Resource {
         name: string,
-        type: 'normal'|'priority',
+        type: 'normal' | 'priority',
         servedTime: number,
         userTime: number,
         endTime: number,
         metrics: {
-            usage: number|null,
-            arrivalRate: number|null,
-            serviceRate: number|null,
-            serviceTime: number|null,
-            awaitSystem: number|null,
-            awaitQueue: number|null,
+            usage: number | null,
+            arrivalRate: number | null,
+            serviceRate: number | null,
+            serviceTime: number | null,
+            awaitSystem: number | null,
+            awaitQueue: number | null,
         },
         queue: {
             id: number,
             priority: number
         }[]
     }
-    
+
     interface Ticket {
         resources: Resource[]
         containers: Container[]
@@ -35,11 +35,11 @@ declare global {
         name: string;
         percentage: number;
     }
-    
+
     interface ProjectLoaded {
         error: boolean;
         message: string;
-        file: Project|null;
+        file: Project | null;
     }
     interface ProjectImported extends ProjectLoaded {
         filePath: string;
@@ -56,7 +56,7 @@ declare global {
 
     interface Window {
         electron: {
-            getProjects: (projects: ProjectFile[]) => void,
+            menuUpdate: (projects: ProjectFile[], activeProject: Project | null) => void,
             system: () => ('mac' | 'win' | 'linux'),
             showAbout: () => void,
             minimize: () => void,

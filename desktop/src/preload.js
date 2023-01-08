@@ -12,7 +12,7 @@ const os = {
 contextBridge.exposeInMainWorld(
     'electron',
     {
-        getProjects: (data) => ipcRenderer.send('projects', data),
+        menuUpdate: (projects, activeProject) => ipcRenderer.send('menuUpdate', projects, activeProject),
         system: () => os[process.platform],
         on: (event, listener) => {
             ipcRenderer.on(event, listener)
@@ -27,7 +27,7 @@ contextBridge.exposeInMainWorld(
         importFile: () => new Promise(async (resolve, reject) => {
             const response = await ipcRenderer.invoke('import-file');
 
-            if(response.error)
+            if (response.error)
                 reject(response)
 
             resolve(response)
@@ -35,7 +35,7 @@ contextBridge.exposeInMainWorld(
         getFile: (filePath) => new Promise(async (resolve, reject) => {
             const response = await ipcRenderer.invoke('get-file', filePath);
 
-            if(response.error)
+            if (response.error)
                 reject(response)
 
             resolve(response)

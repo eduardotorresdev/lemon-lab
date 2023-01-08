@@ -16,6 +16,7 @@ const App = () => {
         activeProject: null,
         freq: 180,
         currentTicket: 0,
+        reset: false,
         playing: false,
         remainingTickets: 2000,
         totalTickets: 2000,
