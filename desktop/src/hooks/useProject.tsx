@@ -3,14 +3,6 @@ import sha256 from "crypto-js/sha256";
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../contexts/AppContext";
 
-interface ProjectFile {
-    name: string;
-    fileName: string;
-    filePath: string;
-    lastOpen: Date;
-    hash: string;
-}
-
 export const useProject = () => {
     const { setState } = useContext(AppContext);
     const [projects, setProjects] = useState(new Map<string, ProjectFile>());
@@ -130,6 +122,22 @@ export const useProject = () => {
             isMounted = false;
         };
     }, []);
+
+    useEffect(() => {
+        if(projects.size > 0) window.electron.getProjects(Array.from(projects.values()))
+    }, [projects]);
+
+    useEffect(() => {
+        window.electron.on('open-project', (event, hash) => {
+            openProject(hash)
+        })
+    }, [])
+
+    useEffect(() => {
+        window.electron.on('open-project-file', () => {
+            importFile()
+        })
+    }, [])
 
     return {
         loading,

@@ -1,6 +1,7 @@
 import { faLemon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import { AppContext } from "@contexts";
 import { getTimeString, getRateString } from "@helpers";
 import "./Resource.sass";
 
@@ -11,7 +12,18 @@ export const Resource = ({
     metrics,
 }: Pick<Resource, "metrics" | "name">) => {
     const prevUsageRef = useRef(0);
+    const { state } = useContext(AppContext);
     const [units, setUnits] = useState(Array(10).fill(false));
+
+    useEffect(() => {
+        if (state.reset) {
+            const percentage = roundToTen(metrics.usage)
+            prevUsageRef.current = percentage;
+            setUnits(Array(10).fill(false).map((value, index) => {
+                return (index + 1) * 10 <= percentage
+            }));
+        }
+    }, [state.reset]);
 
     useEffect(() => {
         const prevUsage = prevUsageRef.current;
@@ -57,7 +69,7 @@ export const Resource = ({
                 <li className="resource__metric">
                     <span className="resource__label">Utilização: </span>
                     <span className="resource__value">
-                        {metrics.usage ? `${metrics.usage?.toFixed(2)}%`: ''}
+                        {metrics.usage ? `${metrics.usage?.toFixed(2)}%` : ""}
                     </span>
                 </li>
                 <li className="resource__metric">

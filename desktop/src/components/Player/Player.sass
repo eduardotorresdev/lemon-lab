@@ -29,42 +29,6 @@
     row-gap: 10px
     align-items: center
 
-.player__timeline
-    grid-area: timeline
-    position: relative
-    height: 12px
-    margin: 10px 0
-
-.player__bar
-    display: flex
-    align-items: center
-    position: absolute
-    background: repeating-linear-gradient(45deg,rgba(150, 150, 150, 0.2),rgba(150, 150, 150, 0.2) 10px,rgba(150, 150, 150, 0.25) 10px,rgba(150, 150, 150, 0.25) 20px)
-    background-size: 200% 100%
-    width: 100%
-    height: 16px
-    border-radius: 4px
-    animation: progress 3s linear 0s infinite
-
-.player__progress
-    background: repeating-linear-gradient(45deg,$dark-green-300,$dark-green-300 10px,lighten($dark-green-300, 5) 10px,lighten($dark-green-300, 5) 20px)
-    background-size: 56px 100%
-    width: 50%
-    height: 100%
-    border-radius: 4px 0 0 4px
-    animation: progress 1s linear 0s infinite
-
-.player__marker
-    background: white
-    width: 15px
-    height: 150%
-    border-radius: 6px
-    cursor: pointer
-    transition: transform 300ms ease
-
-    &:hover
-        transform: scale(1.25)
-
 .player__time
     grid-area: time
 
@@ -93,10 +57,3 @@
     grid-area: play
     justify-self: start
     border-radius: 100%
-
-@keyframes progress
-    from
-        background-position: 0px 50%
-
-    to
-        background-position: 28px 50%

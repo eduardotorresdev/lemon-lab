@@ -12,7 +12,14 @@ const os = {
 contextBridge.exposeInMainWorld(
     'electron',
     {
+        getProjects: (data) => ipcRenderer.send('projects', data),
         system: () => os[process.platform],
+        on: (event, listener) => {
+            ipcRenderer.on(event, listener)
+        },
+        off: (event, listener) => {
+            ipcRenderer.off(event, listener)
+        },
         maximize: () => ipcRenderer.send('maximize'),
         minimize: () => ipcRenderer.send('minimize'),
         quit: () => ipcRenderer.send('close'),

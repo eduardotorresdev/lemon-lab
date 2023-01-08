@@ -2,7 +2,7 @@ import { render } from "react-dom";
 import { Welcome, Simulation } from "@pages";
 import "@sass/index.sass";
 import { AppContext } from "@contexts";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import localforage from "localforage";
 import { Wrapper } from "@components";
 
@@ -20,6 +20,12 @@ const App = () => {
         remainingTickets: 2000,
         totalTickets: 2000,
     });
+
+    useEffect(() => {
+        window.electron.on("close-current-simulation", () => {
+            setApp((app) => ({ ...app, activeProject: null }));
+        });
+    }, []);
 
     return (
         <AppContext.Provider value={{ state: app, setState: setApp }}>

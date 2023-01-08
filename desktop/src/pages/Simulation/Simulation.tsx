@@ -34,6 +34,7 @@ export const Simulation = () => {
                 return {
                     ...state,
                     currentTicket: state.currentTicket + 1,
+                    remainingTickets: state.totalTickets - state.currentTicket - 1
                 };
             });
         }, 60000 / state.freq); // 1 minuto
@@ -42,6 +43,16 @@ export const Simulation = () => {
             clearInterval(lastInterval.current);
         };
     }, [state.freq, state.playing]);
+    
+
+    useEffect(() => {
+        if (state.reset)
+            setState((state) => ({
+                ...state,
+                reset: false,
+                remainingTickets: state.totalTickets - state.currentTicket - 1
+            }));
+    }, [state.reset]);
 
     return (
         <div className="simulation">
@@ -57,8 +68,14 @@ export const Simulation = () => {
                             x={slot.x}
                             y={slot.y}
                         >
-                            <Resource name={resource.name} metrics={resource.metrics} />
-                            <Queue items={resource.queue} type={resource.type}></Queue>
+                            <Resource
+                                name={resource.name}
+                                metrics={resource.metrics}
+                            />
+                            <Queue
+                                items={resource.queue}
+                                type={resource.type}
+                            ></Queue>
                         </Bridge>
                     );
                 })}

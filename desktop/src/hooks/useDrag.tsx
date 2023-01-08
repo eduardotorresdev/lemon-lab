@@ -8,13 +8,20 @@ interface useDragProps {
     x?: number;
     y?: number;
     fixed?: boolean;
+    canDrag?: {
+        current: boolean;
+    };
 }
 
 const FRAME_HEIGHT = 32;
 const DRAG_BOUNDS_GAP = 10;
 
 export const useDrag = (
-    { x = 0, y = 0, fixed }: useDragProps = { x: 0, y: 0, fixed: false }
+    { x = 0, y = 0, fixed, canDrag = { current: true } }: useDragProps = {
+        x: 0,
+        y: 0,
+        fixed: false,
+    }
 ) => {
     const { setState } = useContext(GroupContext);
     const idRef = useRef(generateId());
@@ -33,26 +40,25 @@ export const useDrag = (
                 children: {
                     ...state.children,
                     [idRef.current]: [result.value.posX, result.value.posY],
-                }
+                },
             })),
     }));
+    const bind: any = dragEngine(({ down, cancel, movement: [posX, posY] }) => {
+        if (!canDrag.current) cancel();
 
-    const bind: any = dragEngine(
-        ({ down, movement: [posX, posY] }) => {
-            if (!down) {
-                initial.current = {
-                    posX: initial.current.posX + posX,
-                    posY: initial.current.posY + posY,
-                };
-                return;
-            }
-
-            api.start({
+        if (!down) {
+            initial.current = {
                 posX: initial.current.posX + posX,
                 posY: initial.current.posY + posY,
-            });
-        },
-    );
+            };
+            return;
+        }
+
+        api.start({
+            posX: initial.current.posX + posX,
+            posY: initial.current.posY + posY,
+        });
+    });
 
     return {
         dragRef,

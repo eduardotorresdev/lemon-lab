@@ -8,3 +8,5 @@ export * from './Player/Player';
 export * from './Reservatory/Reservatory';
 export * from './Group/Group';
 export * from './Menu/Menu';
+export * from './Modal/Modal';
+export * from './Slider/Slider';

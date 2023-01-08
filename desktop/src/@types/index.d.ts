@@ -46,10 +46,21 @@ declare global {
         fileName: string;
     }
 
+    interface ProjectFile {
+        name: string;
+        fileName: string;
+        filePath: string;
+        lastOpen: Date;
+        hash: string;
+    }
+
     interface Window {
         electron: {
+            getProjects: (projects: ProjectFile[]) => void,
             system: () => ('mac' | 'win' | 'linux'),
             minimize: () => void,
+            on: (event: string, listener: (event: any, data?: any) => void) => void,
+            off: (event: string, listener: (event: any, data?: any) => void) => void,
             maximize: () => void,
             quit: () => void,
             importFile: () => Promise<ProjectImported>,

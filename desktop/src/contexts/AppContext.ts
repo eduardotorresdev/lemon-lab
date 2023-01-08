@@ -5,6 +5,7 @@ interface AppContextState {
     freq: number;
     currentTicket: number;
     playing: boolean;
+    reset: boolean;
     remainingTickets: number;
     totalTickets: number;
 }
@@ -20,6 +21,7 @@ export const AppContext = createContext<AppContextProps>({
         freq: 12,
         currentTicket: 0,
         playing: false,
+        reset: false,
         remainingTickets: 3000,
         totalTickets: 3000
     },

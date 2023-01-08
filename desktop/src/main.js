@@ -5,22 +5,75 @@ const fs = require('fs/promises');
 const { app, BrowserWindow, Menu, ipcMain, dialog } = require('electron');
 const isDev = require('electron-is-dev');
 
-function setMainMenu() {
+function setMainMenu(win, projects = []) {
     const template = [
         {
             role: 'appmenu',
             submenu: [
-                { label: 'Abrir uma nova simulação' },
+                {
+                    label: 'Abrir uma nova simulação',
+                    click: () => win.webContents.send('open-project-file')
+                },
                 {
                     label: 'Simulações recentes',
-                    submenu: [
-                        { label: 'Simulação de posto' }
-                    ]
+                    submenu: projects.map(project => ({
+                        label: project.name,
+                        click: () => win.webContents.send('open-project', project.hash)
+                    }))
                 },
                 { type: 'separator' },
-                { label: 'Fechar simulação ativa' },
+                {
+                    label: 'Fechar simulação ativa',
+                    click: () => {
+                        win.webContents.send('close-current-simulation')
+                    }
+                },
                 { type: 'separator' },
-                { label: 'Encerrar @lemon-lab' },
+                {
+                    label: 'Encerrar @lemon-lab',
+                    click: () => {
+                        ipcMain.emit('close')
+                    }
+                },
+            ]
+        },
+        {
+            label: 'Simulação',
+            submenu: [
+                {
+                    label: 'Reproduzir', click: () => {
+                        win.webContents.send('player-change-state', 'play')
+                    }
+                },
+                {
+                    label: 'Pausar', click: () => {
+                        win.webContents.send('player-change-state', 'pause')
+                    }
+                },
+                {
+                    label: 'Aumentar velocidade', click: () => {
+                        win.webContents.send('player-change-state', 'speedUp')
+                    }
+                },
+                {
+                    label: 'Diminuir velocidade', click: () => {
+                        win.webContents.send('player-change-state', 'speedDown')
+                    }
+                },
+                {
+                    label: 'Reiniciar', click: () => {
+                        win.webContents.send('player-change-state', 'restart')
+                    }
+                },
+            ]
+        },
+        {
+            label: 'Ajuda',
+            submenu: [
+                {
+                    label: 'Sobre o projeto',
+                    click: () => win.webContents.send('show-about')
+                }
             ]
         }
     ];
@@ -39,7 +92,7 @@ function createWindow() {
         },
         frame: false,
     });
-    setMainMenu();
+    setMainMenu(win);
     win.loadURL(
         isDev
             ? 'http://localhost:8080'
@@ -49,7 +102,13 @@ function createWindow() {
     if (isDev) {
         win.webContents.openDevTools({ mode: 'detach' });
     }
-
+    win.webContents.on('new-window', function (e, url) {
+        e.preventDefault();
+        require('electron').shell.openExternal(url);
+    });
+    ipcMain.on('projects', (event, projects) => {
+        setMainMenu(win, projects);
+    })
     ipcMain.on('close', () => app.quit())
     ipcMain.on('maximize', () => win.isMaximized() ? win.unmaximize() : win.maximize())
     ipcMain.on('minimize', () => win.minimize())

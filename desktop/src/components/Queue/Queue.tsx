@@ -44,15 +44,16 @@ export const Queue = ({ items = [], type = "normal" }: QueueProps) => {
     );
 
     useEffect(() => {
-        if (state.playing === true && state.currentTicket === 0)
-            setQueue(
-                items.map((item) => ({
-                    id: item.id,
-                    priority: item.priority,
-                    icon: ICON[item.id % 6],
-                }))
-            );
-    }, [state.playing]);
+        if (state.reset) {
+            const queue = items.map((item) => ({
+                id: item.id,
+                priority: item.priority,
+                icon: ICON[item.id % 6],
+            }))
+            setQueue(queue);
+            prevItems.current = queue;
+        }
+    }, [state.reset]);
 
     useEffect(() => {
         if (prevItems.current.length > items.length) {

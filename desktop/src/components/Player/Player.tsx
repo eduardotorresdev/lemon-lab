@@ -1,9 +1,8 @@
-import { useCallback, useContext, useEffect, useState } from "react";
-import { AppContext } from "@contexts";
+import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import "./Player.sass";
-import { useDrag } from "@hooks";
+import { useDrag, usePlayer } from "@hooks";
 import { animated, useSpring } from "react-spring";
-import { Button } from "@components";
+import { Button, Slider } from "@components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faMinus,
@@ -12,41 +11,28 @@ import {
     faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 
-const MAX_FREQ = 1500;
-const MIN_FREQ = 100;
-const INCREMENT_FREQ = 50;
-
 const GAP = 10;
 const PLAYER_WIDTH = 400;
 
 export const Player = () => {
-    const { state, setState } = useContext(AppContext);
-    const [{ width }, api] = useSpring(() => ({ width: 0 }));
+    const {
+        state,
+        startAt,
+        play,
+        pause,
+        canSpeedUp,
+        canSpeedDown,
+        speedUp,
+        speedDown,
+    } = usePlayer();
+    const canDrag = useRef(true)
+    const [percentage, setPercentage] = useState(0);
     const { bind, styles } = useDrag({
         x: window.innerWidth - PLAYER_WIDTH - GAP,
         y: 32 + GAP,
         fixed: true,
+        canDrag
     });
-
-    const increment = () => {
-        setState((state) => ({
-            ...state,
-            freq:
-                state.freq < MAX_FREQ
-                    ? state.freq + INCREMENT_FREQ
-                    : state.freq,
-        }));
-    };
-
-    const decrement = () => {
-        setState((state) => ({
-            ...state,
-            freq:
-                state.freq > MIN_FREQ
-                    ? state.freq - INCREMENT_FREQ
-                    : state.freq,
-        }));
-    };
 
     const getFormattedTime = useCallback((minutes: number) => {
         const seconds = minutes * 60;
@@ -69,45 +55,36 @@ export const Player = () => {
     }, [state]);
 
     const getPercentage = useCallback(() => {
-        return (
-           (state.currentTicket / state.totalTickets) * 100
-        );
+        return (state.currentTicket / state.totalTickets) * 100;
     }, [state.currentTicket, state.totalTickets]);
 
     useEffect(() => {
         const percentage = getPercentage();
-        api.start({ width: percentage });
+        setPercentage(percentage);
     }, [state.currentTicket, state.totalTickets]);
 
     return (
         <animated.div
-            className={`player ${state.activeProject && "player--show"}`}
             {...bind()}
+            className={`player ${state.activeProject && "player--show"}`}
             style={styles}
         >
             <h3 className="player__title title">{state.activeProject?.name}</h3>
             <div className="player__controls">
-                <div className="player__timeline">
-                    <span className="player__bar">
-                        <animated.span
-                            className="player__progress"
-                            style={{ width: width.to((value) => `${value}%`) }}
-                        ></animated.span>
-                        <span className="player__marker"></span>
-                    </span>
-                </div>
+                <Slider
+                    percentage={percentage}
+                    onSlide={(percentage) => startAt(percentage)}
+                    onSlideStart={() => {
+                        canDrag.current = false;
+                    }}
+                    onSlideEnd={() => {
+                        canDrag.current = true;
+                    }}
+                />
                 <Button
                     className="player__play"
                     onClick={() => {
-                        setState((state) => ({
-                            ...state,
-                            playing: !state.playing,
-                            currentTicket:
-                                !state.playing &&
-                                state.currentTicket === state.totalTickets - 1
-                                    ? 0
-                                    : state.currentTicket,
-                        }));
+                        state.playing ? pause() : play();
                     }}
                 >
                     <FontAwesomeIcon icon={state.playing ? faPause : faPlay} />
@@ -120,16 +97,16 @@ export const Player = () => {
                 </span>
                 <span className="player__freq">
                     <Button
-                        onClick={increment}
-                        disabled={state.freq === MAX_FREQ}
+                        onClick={speedUp}
+                        disabled={!canSpeedUp()}
                         className="player__action player__action--increment"
                     >
                         <FontAwesomeIcon icon={faPlus} />
                     </Button>{" "}
                     {state.freq} Tickets/min{" "}
                     <Button
-                        onClick={decrement}
-                        disabled={state.freq === MIN_FREQ}
+                        onClick={speedDown}
+                        disabled={!canSpeedDown()}
                         className="player__action player__action--decrement"
                     >
                         <FontAwesomeIcon icon={faMinus} />
