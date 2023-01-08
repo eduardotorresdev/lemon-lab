@@ -20,6 +20,7 @@ contextBridge.exposeInMainWorld(
         off: (event, listener) => {
             ipcRenderer.off(event, listener)
         },
+        showAbout: () => ipcRenderer.emit('show-about'),
         maximize: () => ipcRenderer.send('maximize'),
         minimize: () => ipcRenderer.send('minimize'),
         quit: () => ipcRenderer.send('close'),

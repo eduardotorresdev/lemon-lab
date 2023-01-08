@@ -58,6 +58,7 @@ declare global {
         electron: {
             getProjects: (projects: ProjectFile[]) => void,
             system: () => ('mac' | 'win' | 'linux'),
+            showAbout: () => void,
             minimize: () => void,
             on: (event: string, listener: (event: any, data?: any) => void) => void,
             off: (event: string, listener: (event: any, data?: any) => void) => void,

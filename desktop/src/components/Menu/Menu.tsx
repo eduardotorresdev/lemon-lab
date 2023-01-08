@@ -1,4 +1,4 @@
-import { useProject } from "@hooks";
+import { usePlayer, useProject } from "@hooks";
 import React, {
     ReactNode,
     useContext,
@@ -65,6 +65,7 @@ const MenuDropdown = ({ title, children }: MenuDropdownProps) => {
 
 export const Menu = () => {
     const { importFile, projects, openProject } = useProject();
+    const { play, pause, restart, speedUp, speedDown } = usePlayer();
     const { state, setState } = useContext(AppContext);
 
     return (
@@ -103,20 +104,18 @@ export const Menu = () => {
                     </MenuLink>
                 </MenuDropdown>
                 <MenuDropdown title="Simulação">
-                    <MenuLink onClick={importFile}>Reproduzir</MenuLink>
-                    <MenuLink onClick={importFile}>Pausar</MenuLink>
-                    <MenuLink onClick={importFile}>
+                    <MenuLink onClick={play}>Reproduzir</MenuLink>
+                    <MenuLink onClick={pause}>Pausar</MenuLink>
+                    <MenuLink onClick={speedUp}>
                         Aumentar velocidade
                     </MenuLink>
-                    <MenuLink onClick={importFile}>
+                    <MenuLink onClick={speedDown}>
                         Diminuir velocidade
                     </MenuLink>
-                    <MenuLink onClick={importFile}>Reiniciar</MenuLink>
+                    <MenuLink onClick={restart}>Reiniciar</MenuLink>
                 </MenuDropdown>
                 <li className="menu__item">
-                    <a href="/" className="menu__link">
-                        Sobre
-                    </a>
+                    <MenuLink onClick={window.electron.showAbout}>Sobre o projeto</MenuLink>
                 </li>
             </ul>
         </div>
